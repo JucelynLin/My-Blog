@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/blog.css">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>MY BLOG</title>
+
+    <!-- <script>
+      function save (){
+          $.ajax({
+              url:'https://docs.google.com/spreadsheets/d/1KYJlAPM31T7qaf1arih35tM0abY83WdoLAkYWF_QWA4/edit#gid=0',
+              type:'post',
+              data:$("#button").serializeArray(),
+              success: function(){
+                alert("Form Data Submitted :)")
+              },
+              error: function(){
+                alert("There was an error :(")
+              }
+          });
+      }
+      </script> -->
+  </head>
+      
+<body>
+  <!-- Include stylesheet -->
+  <link href="https://cdn.quilljs.com/1.3.6/quill.snow.css" rel="stylesheet">
+  <!-- Include the Quill library -->
+  <script src="https://cdn.quilljs.com/1.3.6/quill.js"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js" ></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.0/gsap.min.js"></script>
+  <script src="js/blog.js"></script>
+
+  <div class="cover">
+    <div class="spinner-border text-warning" role="status">
+      <span class="sr-only">LOADING...</span>
+    </div>
+  </div>
+
+  <nav class="navbar navbar-expand-lg nav nav1">
+    <div class="container">
+      <a href="#" class="navbar-brand text-light">在水中盛開的玫瑰</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#toggleMobileMenu" aria-controls="toggleMobileMenu" aria-expanded="false" aria-lable="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      
+      <div class="collapse navbar-collapse" id="toggleMobileMenu">
+        <ul class="navbar-nav ms-auto text-center">
+          <li class="nav-item-1">
+            <a class="nav-link text-light" href="#">部落格</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container">
+    <section class="image-bg-fluid-height" id="about">
+      <h1>俄尼里伊 的部落格</h1>
+      <h2>小王子 - 簡介</h2>
+      <p>2021-6-27 15:54</p>
+      <img class="img-responsive  mx-auto d-block" src="images/Le Petit Prince.png">
+    
+      <div class="text1">
+        <h4 class="text-center">法語：Le Petit Prince</h3>
+        <h4 class="text-center">作者：安托萬·聖修伯里</h3>
+        <h4 class="text-center">類型：兒童文學</h3>
+      </div>
+      <div class="text2">
+        <h5 class="text-center">一位先生回憶起自己小時候，在與大人交流中一直找不到一個能夠闡述自己的價值觀的人，因為大人們都太講實際了。</h6>
+        <h5 class="text-center">先生長大後，成為一名飛行員，不過因飛機故障而迫降在撒哈拉沙漠，途中遇見小王子。</h6>
+        <h5 class="text-center">小王子告訴飛行員自己來自另一顆名為B612的星球，而小王子也告訴他為什麼離開自己的星球，在抵達地球之前，途中又到訪了其他星球，他訪問了國王、愛虛榮的人、酒鬼、商人、點燈人、地理學家、蛇、三枚花瓣的沙漠花、玫瑰園、扳道工、商販、狐狸以及這位飛行員。</h6>
+        <h5 class="text-center">飛行員和小王子在沙漠中共同擁有過一段極為珍貴的友誼。當小王子要離開地球時，飛行員非常悲傷。</h6>
+        <h5 class="text-center">他一直非常懷念他們共度的時光。 此後，他為紀念小王子寫了這部小說。</h6>
+      </div>
+    </section>
+  </div>
+
+    <div class="container comment">
+      <div class = "form-group">
+        <label class = "control-label" for = "comment">給作者的話：</label>
+        <textarea class = "form-control" name="comment" id="comment" size = "250" placeholder="Leave a comment..."></textarea>
+          <!-- <input type = "comment" id = "comment" class = "form-control" size = "250" placeholder="Leave a comment..."> -->
+        <div class="btn">
+          <button class="submit">確定</button>
+        </div>
+      </div>
+    </div>
+
+
+<!-- <div id="toolbar" name="toolbar"></div>
+<div id="editor" name="editor"></div>
+
+<button id="save" type="button">Save</button>
+
+<script>
+    var toolbarOptions = [
+        ['bold', 'italic', 'underline', 'strike'],
+        ['blockquote', 'code-block'],
+        [{'header': [1, 2, 3, 4, 5, 6, false] }],
+        [{'list': 'ordered'}, {'list': 'bullet'}],
+        [{'script': 'sub'}, {'script': 'super'}],
+        [{'indent': '-1'}, {'indent': '+1'}],
+        [{'direction': 'rtl'}],
+        [{'size': ['small', false, 'large', 'huge'] }],
+        ['link', 'image', 'video', 'formula'],
+        [{'color': [] }, {'background': [] }],
+        [{'font': [] }],
+        [{'align': [] }],
+    ];
+
+    var quill =  new Quill('#editor', {
+        modules:{
+            toolbar: toolbarOptions
+        },
+        theme: 'snow'
+    });
+
+     //mocking data
+     const ans = [
+      {
+        attributes: {
+          underline: true
+        },
+        insert: ""
+      },
+      {
+        insert: "\n"
+      }
+    ]
+    // set mocking data , if in normal, these data will get from db 
+    quill.setContents(ans);
+    const saveBtn = document.getElementById("save");
+    saveBtn.addEventListener('click', (e) => {
+      const content = quill.getContents();
+      console.log(content.ops);
+
+    })
+
+</script> -->
+
+</body>
+</html>
